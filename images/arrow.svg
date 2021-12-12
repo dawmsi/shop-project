@@ -1,0 +1,10 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 6" width="9" height="6">
+	<title>Группа 1</title>
+	<style>
+		tspan { white-space:pre }
+		.s0 { fill: #ffffff } 
+	</style>
+	<g id="Группа 1">
+		<path id="Прямоугольник 4 копия 13" class="s0" d="m0.76 2l1.41-1.41l4.24 4.24l-1.41 1.41l-4.24-4.24zm2.83 2.83l4.24-4.24l1.41 1.41l-4.24 4.24l-1.41-1.41z" />
+	</g>
+</svg>

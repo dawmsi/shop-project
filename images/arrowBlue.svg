@@ -1,0 +1,8 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 6" width="9" height="6">
+	<title>Прямоугольник 4 копия</title>
+	<style>
+		tspan { white-space:pre }
+		.s0 { fill: #2c71b8 } 
+	</style>
+	<path id="Прямоугольник 4 копия" class="s0" d="m0.76 2l1.41-1.41l4.24 4.24l-1.41 1.41l-4.24-4.24zm2.83 2.83l4.24-4.24l1.41 1.41l-4.24 4.24l-1.41-1.41z" />
+</svg>
