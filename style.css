@@ -324,7 +324,10 @@ li:hover>a {
     font-weight: 300;
     text-align: center;
 }
-
+.element-back,
+.element-next{
+    cursor: pointer;
+}
 .main {
     color: white;
     font-size: 21px;
