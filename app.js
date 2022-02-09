@@ -42,3 +42,9 @@ moreDetailsB.forEach((button) => {
 });
 // close
 btnClose.addEventListener("click", OpenClose);
+
+//slider
+$(".carusel").slick({
+  dots: true,
+  autoplay: true,
+});
