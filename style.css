@@ -350,6 +350,7 @@ li:hover>a {
 .filter-item {
     line-height: 40px;
     list-style: none;
+    cursor: pointer;
 }
 
 .filter-item::before {

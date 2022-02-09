@@ -18,3 +18,13 @@ LikeBtns.forEach((likeB) => {
     likeB.classList.toggle("liked");
   });
 });
+
+// filter selecting
+
+const selectList = document.querySelectorAll(".filter-item");
+
+selectList.forEach((item) => {
+  item.addEventListener("click", () => {
+    item.classList.toggle("filter-item-selected");
+  });
+});
