@@ -276,10 +276,12 @@ li:hover>a {
 }
 
 .slick-next:before {
+    font-size: 30px;
     content: url("images/next.svg");
 }
 
 .slick-prev:before {
+    font-size: 30px;
     content: url("images/prev.svg");
 }
 
@@ -318,6 +320,7 @@ li:hover>a {
 }
 
 .filter-section {
+    user-select: none;
     padding: 21px 30px;
     list-style-position: inside;
 }
