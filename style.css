@@ -402,6 +402,15 @@ li:hover>a {
     cursor: pointer;
 }
 
+.default-button:hover {
+    background-color: #fff;
+    color: #2c71b8;
+}
+
+.default-button:hover>.add-to-cart-icon {
+    content: url("images/ishopBlue.svg");
+}
+
 .routes {
     font-size: 14px;
     line-height: 24px;
@@ -544,6 +553,8 @@ select:focus>option:checked {
 
 .add-to-cart-icon {
     position: absolute;
+    width: 15px;
+    height: 17px;
     top: 15px;
     right: 15px;
     content: url(images/ishop.svg);
