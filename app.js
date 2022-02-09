@@ -28,3 +28,17 @@ selectList.forEach((item) => {
     item.classList.toggle("filter-item-selected");
   });
 });
+
+// open/close modal window
+const modalW = document.querySelector(".modal");
+const moreDetailsB = document.querySelectorAll(".more-details");
+const btnClose = document.querySelector(".btn-close");
+function OpenClose() {
+  modalW.classList.toggle("show");
+}
+// open
+moreDetailsB.forEach((button) => {
+  button.addEventListener("click", OpenClose);
+});
+// close
+btnClose.addEventListener("click", OpenClose);
