@@ -98,3 +98,6 @@ $(".carusel").slick({
 $(window).on("beforeunload", () => {
   $(window).scrollTop(0);
 });
+
+//aos
+AOS.init();
