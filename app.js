@@ -5,7 +5,9 @@ const addToCartBtns = document.querySelectorAll(".add-to-cart");
 
 for (let i = 0; i < addToCartBtns.length; i++) {
   addToCartBtns[i].addEventListener("click", () => {
-    productsCounEl.textContent = +productsCounEl.textContent + 1;
+    productsCounEl.textContent =
+      +productsCounEl.textContent + +quantityInput[i].value;
+    quantityInput[i].value = 1;
   });
 }
 
@@ -94,10 +96,44 @@ $(".carusel").slick({
   autoplay: true,
 });
 
-//пыднятись вверх перд оновленням сторінки
+//піднятись вверх перед оновленням сторінки
 $(window).on("beforeunload", () => {
   $(window).scrollTop(0);
 });
 
 //aos
 AOS.init();
+
+let decBtns = document.querySelectorAll(".decrement-button");
+let incBtns = document.querySelectorAll(".increment-button");
+let quantityInput = document.querySelectorAll(".product-quantity input");
+let minCount = 1;
+let maxCount = 10;
+
+for (let i = 0; i < quantityInput.length; i++) {
+  let currentValue = +quantityInput[i].value;
+  toggleButtonState(currentValue, incBtns[i], decBtns[i]);
+}
+
+function toggleButtonState(count, incBtn, decBtn) {
+  decBtn.disabled = count <= minCount;
+  incBtn.disabled = count >= maxCount;
+}
+
+for (let i = 0; i < decBtns.length; i++) {
+  decBtns[i].addEventListener("click", () => {
+    let currentValue = +quantityInput[i].value;
+    let nextValue = currentValue - 1;
+    quantityInput[i].value = nextValue;
+    toggleButtonState(nextValue, incBtns[i], decBtns[i]);
+  });
+}
+
+for (let i = 0; i < incBtns.length; i++) {
+  incBtns[i].addEventListener("click", () => {
+    let currentValue = +quantityInput[i].value;
+    let nextValue = currentValue + 1;
+    quantityInput[i].value = nextValue;
+    toggleButtonState(nextValue, incBtns[i], decBtns[i]);
+  });
+}
