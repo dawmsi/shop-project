@@ -36,6 +36,51 @@ const btnClose = document.querySelector(".btn-close");
 function OpenClose() {
   modalW.classList.toggle("show");
 }
+
+function showOnScrollTo() {
+  // параметр виводу модального выкна
+  let positionPage = "middle";
+
+  switch (positionPage) {
+    case "start":
+      startP();
+      break;
+    case "middle":
+      middleP();
+      break;
+    case "end":
+      endP();
+      break;
+    default:
+      break;
+  }
+}
+
+function startP() {
+  if (window.scrollY) {
+    OpenClose();
+    stopEL();
+  }
+}
+function middleP() {
+  if (window.scrollY >= document.body.scrollHeight / 2) {
+    OpenClose();
+    stopEL();
+  }
+}
+function endP() {
+  if ($(window).scrollTop() + $(window).height() >= $(document).height() - 1) {
+    OpenClose();
+    stopEL();
+  }
+}
+
+window.addEventListener("scroll", showOnScrollTo);
+
+function stopEL() {
+  window.removeEventListener("scroll", showOnScrollTo);
+}
+
 // open
 moreDetailsB.forEach((button) => {
   button.addEventListener("click", OpenClose);
@@ -47,4 +92,9 @@ btnClose.addEventListener("click", OpenClose);
 $(".carusel").slick({
   dots: true,
   autoplay: true,
+});
+
+//пыднятись вверх перд оновленням сторінки
+$(window).on("beforeunload", () => {
+  $(window).scrollTop(0);
 });
