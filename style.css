@@ -4,8 +4,11 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-image: url("images/patt.png");
-
+    background-image: url('images/background.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
 }
 
 .header,
@@ -30,12 +33,12 @@ footer {
 .row::after,
 .menu::after,
 .search::after {
-    content: "";
+    content: '';
     display: block;
     clear: both;
 }
 
-[class*="col-"] {
+[class*='col-'] {
     float: left;
     padding-left: 15px;
     padding-right: 15px;
@@ -89,40 +92,39 @@ footer {
     vertical-align: middle;
 }
 
-
-.menu>li {
+.menu > li {
     float: left;
     width: 25%;
-    border-left: 1px solid #2c71b8;
+    border-left: 1px solid palevioletred;
     border-style: solid;
     position: relative;
 }
 
 .menu li:last-child {
-    border-right: 1px solid #2c71b8;
+    border-right: 1px solid palevioletred;
 }
 
-.menu>li>a {
+.menu > li > a {
     display: block;
     height: 50px;
     line-height: 50px;
     text-align: center;
     text-decoration: none;
-    color: #2c71b8;
+    color: palevioletred;
     font-size: 21px;
     transition: all 0.3s;
 }
 
-.menu>li>a:hover {
-    background-color: #2c71b8;
+.menu > li > a:hover {
+    background-color: palevioletred;
     color: white;
 }
 
-.menu>li:hover>.arrowDown {
+.menu > li:hover > .arrowDown {
     background-image: url(images/arrow.svg);
 }
 
-.menu>li:hover>.subMenu {
+.menu > li:hover > .subMenu {
     display: block;
 }
 
@@ -130,20 +132,20 @@ footer {
     display: none;
     position: absolute;
     z-index: 10;
-    background-color: #2c71b8;
+    background-color: palevioletred;
     padding: 20px 0;
     width: 202%;
     left: -1px;
     transition: display 0.3s;
 }
 
-.subMenu>li {
+.subMenu > li {
     display: block;
     line-height: 40px;
     text-decoration: none;
 }
 
-.subMenu>li>a {
+.subMenu > li > a {
     font-size: 21px;
     display: block;
     text-decoration: none;
@@ -151,13 +153,13 @@ footer {
     color: white;
 }
 
-.subMenu>li>a:hover {
+.subMenu > li > a:hover {
     background-color: white;
-    color: #2c71b8;
+    color: palevioletred;
 }
 
-li:hover>a {
-    background-color: #2c71b8;
+li:hover > a {
+    background-color: palevioletred;
     color: white;
 }
 
@@ -182,7 +184,7 @@ li:hover>a {
 }
 
 .search {
-    border: 1px solid #2c71b8;
+    border: 1px solid palevioletred;
     padding: 4px;
     max-height: 40px;
     width: 200px;
@@ -192,7 +194,7 @@ li:hover>a {
 .search-field {
     background-color: transparent;
     border: none;
-    color: #2c71b8;
+    color: palevioletred;
     display: block;
     font-family: 'Roboto', sans-serif;
     float: left;
@@ -203,7 +205,7 @@ li:hover>a {
 }
 
 .search-field::placeholder {
-    color: #2c71b8;
+    color: palevioletred;
 }
 
 .search-field:focus {
@@ -212,11 +214,11 @@ li:hover>a {
 }
 
 .search-button {
-    background-color: #2c71b8;
+    background-color: palevioletred;
     background-image: url(images/search.svg);
     background-repeat: no-repeat;
     background-position: center;
-    border: 1px solid #2c71b8;
+    border: 1px solid palevioletred;
     float: right;
     height: 30px;
     width: 30px;
@@ -226,12 +228,13 @@ li:hover>a {
     float: right;
     margin: 5px auto;
     position: relative;
+    background-color: transparent;
 }
 
 .prod-count {
     position: absolute;
     border-radius: 50%;
-    background-color: #2c71b8;
+    background-color: palevioletred;
     color: white;
     font-size: 12px;
     text-align: center;
@@ -246,7 +249,7 @@ li:hover>a {
 .basket {
     background-image: url(images/ishopBlue.svg);
     background-position: center;
-    background-color: white;
+    background-color: transparent;
     background-repeat: no-repeat;
     height: 40px;
     width: 40px;
@@ -264,12 +267,11 @@ li:hover>a {
     padding-left: 5px;
 }
 
-.carusel>div {
+.carusel > div {
     text-align: center;
     font-size: 100px;
     padding: 150px 0;
 }
-
 
 .slick-prev:before,
 .slick-next:before {
@@ -279,12 +281,12 @@ li:hover>a {
 
 .slick-next:before {
     font-size: 30px;
-    content: url("images/next.svg");
+    content: url('images/next.svg');
 }
 
 .slick-prev:before {
     font-size: 30px;
-    content: url("images/prev.svg");
+    content: url('images/prev.svg');
 }
 
 .slick-dots {
@@ -314,7 +316,6 @@ li:hover>a {
     font-size: 21px;
 }
 
-
 .filter {
     border-right: 2px solid white;
     background-color: rgba(255, 255, 255, 0.25);
@@ -338,7 +339,7 @@ li:hover>a {
     display: inline-block;
     height: 12px;
     width: 20px;
-    background-image: url("images/squareNull.svg");
+    background-image: url('images/squareNull.svg');
     background-repeat: no-repeat;
 }
 
@@ -349,9 +350,8 @@ li:hover>a {
 .filter-item-selected::before {
     content: '';
     display: inline-block;
-    background-image: url("images/squareFull.svg");
+    background-image: url('images/squareFull.svg');
 }
-
 
 .filter-name {
     text-transform: uppercase;
@@ -372,7 +372,7 @@ li:hover>a {
 .default-button {
     display: block;
     text-transform: uppercase;
-    background-color: #2b71b8;
+    background-color: #4f2571;
     border: 1px solid white;
     color: white;
     font-size: 21px;
@@ -385,17 +385,17 @@ li:hover>a {
 
 .default-button:hover {
     background-color: #fff;
-    color: #2c71b8;
+    color: palevioletred;
 }
 
-.default-button:hover>.add-to-cart-icon {
-    content: url("images/ishopBlue.svg");
+.default-button:hover > .add-to-cart-icon {
+    content: url('images/ishopBlue.svg');
 }
 
 .routes {
     font-size: 14px;
     line-height: 24px;
-    opacity: .5;
+    opacity: 0.5;
     padding-top: 25px;
 }
 
@@ -416,9 +416,8 @@ li:hover>a {
     line-height: 65px;
 }
 
-
 .sort-section {
-    background-color: #2b71b8;
+    background-color: #4f2571;
     border: 1px solid white;
     color: white;
     width: 100%;
@@ -430,9 +429,9 @@ li:hover>a {
     outline: none;
 }
 
-select:focus>option:checked {
+select:focus > option:checked {
     background: white !important;
-    color: #2b71b8;
+    color: #240849;
 }
 
 .product {
@@ -465,7 +464,7 @@ select:focus>option:checked {
     height: 30px;
     background-position: center center;
     background-repeat: no-repeat;
-    border: 1px solid #2c71b8;
+    border: 1px solid palevioletred;
     margin: 10px;
 }
 
@@ -475,7 +474,7 @@ select:focus>option:checked {
 
 .zoom:hover {
     background-image: url(images/zoomWhite.svg);
-    background-color: #2b71b8;
+    background-color: #4f2571;
 }
 
 .like {
@@ -485,12 +484,12 @@ select:focus>option:checked {
 .like:hover,
 .like.liked {
     background-image: url(images/likeWhite.svg);
-    background-color: #2b71b8;
+    background-color: #4f2571;
 }
 
 .product-info {
     padding: 15px;
-    background-color: rgba(44, 115, 186, 0.75);
+    background-color: rgba(41, 12, 46, 0.75);
     line-height: 33px;
 }
 
@@ -538,6 +537,7 @@ select:focus>option:checked {
     height: 17px;
     top: 15px;
     right: 15px;
+    color: palevioletred;
     content: url(images/ishop.svg);
 }
 
@@ -552,7 +552,7 @@ select:focus>option:checked {
 }
 
 .copy-text {
-    color: #2c71b8;
+    color: palevioletred;
     font-size: 21px;
     line-height: 50px;
     text-align: center;
@@ -580,7 +580,6 @@ select:focus>option:checked {
     border: 1px solid gray;
     padding: 15px;
 }
-
 
 .form-field {
     margin: 10px auto;
